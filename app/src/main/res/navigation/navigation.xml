@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tittleFragment2">
+    <fragment
+        android:id="@+id/tittleFragment2"
+        android:name="com.example.lab4.tittleFragment"
+        android:label="fragment_tittle"
+        tools:layout="@layout/fragment_tittle" >
+        <action
+            android:id="@+id/action_tittleFragment2_to_registro2"
+            app:destination="@id/registro" />
+    </fragment>
+    <fragment
+        android:id="@+id/acercaDe2"
+        android:name="com.example.lab4.acercaDe"
+        android:label="acercaDe" />
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.lab4.registro"
+        android:label="registro" >
+        <action
+            android:id="@+id/action_registro_to_resultado"
+            app:destination="@id/resultado" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultado"
+        android:name="com.example.lab4.resultado"
+        android:label="resultado" >
+        <action
+            android:id="@+id/action_resultado_to_acercaDe2"
+            app:destination="@id/acercaDe2" />
+    </fragment>
+</navigation>
